@@ -1,0 +1,19 @@
+${PODS_ROOT}/Target Support Files/Pods-ps/Pods-ps-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/CleanJSON/CleanJSON.framework
+${BUILT_PRODUCTS_DIR}/CombineCocoa/CombineCocoa.framework
+${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework
+${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework
+${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework
+${BUILT_PRODUCTS_DIR}/GRDB.swift/GRDB.framework
+${BUILT_PRODUCTS_DIR}/JXSegmentedView/JXSegmentedView.framework
+${BUILT_PRODUCTS_DIR}/LeanCloud/LeanCloud.framework
+${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework
+${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework
+${BUILT_PRODUCTS_DIR}/Moya/Moya.framework
+${BUILT_PRODUCTS_DIR}/PanModal/PanModal.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
+${BUILT_PRODUCTS_DIR}/SwiftProtobuf/SwiftProtobuf.framework
+${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework
+${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework
+${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework

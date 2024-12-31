@@ -1,0 +1,17 @@
+//
+//  Release.xcconfig
+//  ps
+//
+//  Created by chen on 2024/11/19.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Pods/Target Support Files/Pods-ps/Pods-ps.release.xcconfig"
+
+EXCLUDED_ARCHS[sdk=iphonesimulator*] = arm64
+
+APP_NAME = ps
+
+API_BASE_URL_SCHEME = http
