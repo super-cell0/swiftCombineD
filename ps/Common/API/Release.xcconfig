@@ -14,4 +14,4 @@ EXCLUDED_ARCHS[sdk=iphonesimulator*] = arm64
 
 APP_NAME = ps
 
-API_BASE_URL_SCHEME = http
+API_BASE_URL_SCHEME = https

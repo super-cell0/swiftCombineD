@@ -20,7 +20,7 @@ class PrimaryIntroViewController: BaseViewController {
     
     struct Item: Hashable {
         let id = UUID()
-        let imageName: String
+        //let imageName: String
     }
         
     var dataSource: UICollectionViewDiffableDataSource<Section, Item>! = nil
@@ -35,14 +35,8 @@ class PrimaryIntroViewController: BaseViewController {
         
         var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
         snapshot.appendSections([.main])
-        snapshot.appendItems([
-            Item(imageName: "code1"),
-            Item(imageName: "code1"),
-            Item(imageName: "code1"),
-            Item(imageName: "code1"),
-        ])
+        snapshot.appendItems(generateItems(count: 4), toSection: .main)
         self.dataSource.apply(snapshot)
-        
         
     }
     
@@ -61,20 +55,31 @@ class PrimaryIntroViewController: BaseViewController {
                 if self.currentIndex < 3 {
                     self.collectionView.scrollToItem(at: IndexPath(item: self.currentIndex + 1, section: 0), at: .centeredHorizontally, animated: true)
                     self.currentIndex += 1
+                }  else {
+                    // 执行进一步操作 例如进入主页面
+                    goAhead()
                 }
                 self.updateNextButton()
             }
             .store(in: &subscriptions)
     }
+    
+    func generateItems(count: Int) -> [Item] {
+        var items: [Item] = []
+        for _ in 0..<count {
+            items.append(Item())
+        }
+        return items
+    }
+    
+    func goAhead() {
+        keyWindow?.rootViewController = UINavigationController(rootViewController: IntroViewController())
+    }
 
 }
 
 extension PrimaryIntroViewController {
-    
-//    func goAHead() {
-//        keyWindow?.rootViewController = NavigationController(rootViewController: T##UIViewController)
-//    }
-    
+
     func generateLayout() -> UICollectionViewLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -88,7 +93,7 @@ extension PrimaryIntroViewController {
     
     func setupDataSource() {
         let introItem = UICollectionView.CellRegistration<IntroItem, Item> { cell, indexPath, itemIdentifier in
-            cell.iImageView.image = UIImage(named: itemIdentifier.imageName)
+            cell.contentView.backgroundColor = .random
         }
         
         let dataSource = UICollectionViewDiffableDataSource<Section, Item>(collectionView: collectionView) { collectionView, indexPath, itemIdentifier in

@@ -31,8 +31,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         
         let vc: UIViewController
+        let boolRandom = Bool.random()
         
-        if true {
+        if false {
             vc = RootViewController()
         } else {
             vc = BaseNavigationController(rootViewController: PrimaryIntroViewController())
